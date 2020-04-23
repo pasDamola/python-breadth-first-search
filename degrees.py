@@ -31,6 +31,7 @@ def load_data(directory):
             else:
                 names[row["name"].lower()].add(row["id"])
 
+
     # Load movies
     with open(f"{directory}/movies.csv", encoding="utf-8") as f:
         reader = csv.DictReader(f)
@@ -50,7 +51,6 @@ def load_data(directory):
                 movies[row["movie_id"]]["stars"].add(row["person_id"])
             except KeyError:
                 pass
-
 
 def main():
     if len(sys.argv) > 2:
