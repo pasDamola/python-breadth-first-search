@@ -91,9 +91,13 @@ def shortest_path(source, target):
 
     If no possible path, returns None.
     """
+    movie_set =  neighbors_for_person(source)
+    
+    # print(list(movie_set[0]))
+    # for set in list(movie_set):
+    #     if(target in set[1]):
+    #         print(movie_set[set])
 
-    # TODO
-    raise NotImplementedError
 
 
 def person_id_for_name(name):
